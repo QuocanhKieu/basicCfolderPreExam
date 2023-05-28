@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+
+void main ()
+{
+	char ch;
+	printf ("\nEnter a lower cased alphabet (a - z) : ");
+	scanf("%c", &ch);
+	if (ch < 'a' || ch > 'z')
+	printf("\nCharacter not a lower cased alphabet");
+	else
+	switch (ch)
+	{
+		case 'u' :
+		case 'e' :
+		case 'o' :
+		case 'a' :
+		case 'i' :
+		printf("\nCharacter is a vowel");
+		break;
+		case 'z' :
+		printf("\nLast Alphabet (z) was entered");
+		break;
+		default :
+		printf("\nCharacter is a consonant");
+		break;
+	}
+}
