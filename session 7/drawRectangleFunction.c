@@ -29,8 +29,18 @@ void drawIsoscelesTriangle(int length) {
 	}
 }
 
-void drawHollowTriangle(int length) {
-	int i, j;
+void drawHollowIsoscelesTriangleReversed(int length) {
+	int i, j, starInit = 2*length - 1;
+	
+	for( i = 0 ; i < length ; i ++) {
+		for (j = 0; j < i ; j++) printf(" ");
+		for(j = 0 ; j < starInit; j ++) {
+			if(i == 0 || i == length - 1 || j == 0 || j == starInit - 1) printf("*");
+			else printf(" ");
+		}
+		printf("\n");
+		starInit-=2;
+	}
 	
 }
 
@@ -60,6 +70,16 @@ void drawLeftHalfTriangle(int length, int width) {
 	}
 }
 
+void drawXSign(int length) {
+	int i,j;
+	for (i = 0; i < length; i++) {
+		for (j = 0; j < length; j++) {
+			if ( i == j || i + j == length - 1) printf("*");
+			else printf(" ");
+		}
+		printf("\n");
+	}
+}
 int main() {
 	int length, width;
 	printf("Enter length and with: ");
@@ -77,6 +97,10 @@ int main() {
 	drawRightHalfTriangle(5, 5);
 	printf("\n");
 	drawLeftHalfTriangle(5, 5);
+	printf("\n");
+	drawHollowIsoscelesTriangleReversed(5);
+	printf("\n");
+	drawXSign(7);
 	return 0;
 }
 
