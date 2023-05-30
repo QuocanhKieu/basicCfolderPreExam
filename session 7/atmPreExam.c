@@ -43,7 +43,7 @@ void showExitMessage() {
 	printf("Tam biet va gen gap lai !\n");
 }
 
-void showInvalidOptiotion() {
+void showInvalidOption() {
 	printf("Lua chon khong hop le!\nVui long nhap lai.\n");
 }
 int main() {
@@ -76,7 +76,7 @@ int main() {
 				break;
 			}
 			default: 
-				showInvalidOptiotion();			
+				showInvalidOption();			
 		}
 		printf("\n\n");
 	}
